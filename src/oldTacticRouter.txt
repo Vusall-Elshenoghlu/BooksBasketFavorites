@@ -1,0 +1,49 @@
+// import Home from './pages/User/Home'
+// import Products from './pages/User/Products'
+// import ProductDetail from './pages/User/ProductDetail'
+// import Basket from './pages/User/Basket'
+// import Favorites from './pages/User/Favorites'
+// import NotFound from './pages/User/NotFound'
+// import DashBoard from './pages/Admin/DashBoard'
+// import AdminProducts from './pages/Admin/AdminProducts'
+// import AdminProductDetail from './pages/Admin/AdminProductDetail'
+// import AddProduct from './pages/Admin/AddProduct'
+// import EditProduct from './pages/Admin/EditProduct'
+// import AdminRoot from './pages/Admin/AdminRoot'
+// import UserRoot from './pages/User/UserRoot'
+
+// {/* <Routes>
+//       {/* User Route */}
+//       <Route path="/" element = {<UserRoot/>}>
+//         <Route index element = {<Home/>}/>
+//         {/* <Route path='/products' element = {<Products/>}/>
+//         <Route path='/products/:id' element = {<ProductDetail/>}/> */}
+//         {/* Inner Router */}
+//         <Route path='/products'>  
+//           <Route index element = {<Products/>}/>
+//           <Route path=':id' element = {<ProductDetail/>}/>
+//         </Route>
+//         <Route path='/basket' element = {<Basket/>}/>
+//         <Route path='/favorites' element = {<Favorites/>}/>
+//         <Route path='*' element = {<NotFound/>}/>
+
+//       </Route>
+
+//       {/* Admin Router */}
+//       <Route path='/admin' element = {<AdminRoot/>}>
+//           <Route index element = {<DashBoard/>}/>
+//           {/* <Route path='/products' element = {<AdminProducts/>}/>
+//           <Route path='/products/:id' element = {<AdminProductDetail/>}/>
+//           <Route path='/products/addproduct' element = {<AddProduct/>}/>
+//           <Route path='/products/editproduct' element = {<EditProduct/>}/> */}
+//           {/* Inner */}
+//           <Route path='products'>
+//             <Route index element = {<AdminProducts/>}/>
+//             <Route path=':id' element = {<AdminProductDetail/>}/>
+//             <Route path='addproduct' element = {<AddProduct/>}/>
+//             <Route path='editproduct' element = {<editProduct/>}/>
+//           </Route>
+          
+//       </Route>
+
+//      </Routes> */}
