@@ -14,8 +14,8 @@ function Products({product  }) {
   useEffect(() => {
     getBooks();
   }, []);
-  const {addToFavorites } = useContext(FavoritesContext);
-  const {addToBaskets} = useContext(BasketContext)
+  const {favorites, addToFavorites } = useContext(FavoritesContext);
+  const {baskets,addToBaskets} = useContext(BasketContext)
 
 
 
@@ -30,6 +30,12 @@ function Products({product  }) {
         setError(err);
         setLoading(false);
       });
+  }
+  function isInBasket(bookId) {
+    return baskets.some((basketItem) => basketItem.id === bookId);
+  }
+  function isInFavorites(bookId){
+    return favorites.some((item) => item.id === bookId)
   }
 
   if (loading) return <Spinner animation="border" />;
@@ -56,11 +62,11 @@ function Products({product  }) {
                       <FaInfo />
                     </button>
                   </Nav.Link>
-                  <button className='btn btn-outline-primary mx-2' onClick={()=>addToFavorites(book)}>
+                  <button className={isInFavorites(book.id) ? "btn mx-2 btn-success" : "btn btn-outline-primary mx-2"} onClick={()=>addToFavorites(book)}>
                     <FaHeart />
                   </button>
                   <button className='btn btn-outline-danger' onClick={()=>addToBaskets(book)}>
-                    Add <FaShoppingCart />
+                    {isInBasket(book.id) ? "Added" : "Add"} <FaShoppingCart />
                   </button>
                 </div>
               </Card.Body>

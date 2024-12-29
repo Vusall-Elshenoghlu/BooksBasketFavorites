@@ -1,8 +1,9 @@
 import React, { useContext } from 'react'
 import { BasketContext } from '../../../context/BasketConext'
-import { Nav } from 'react-bootstrap'
+import { Button, Nav } from 'react-bootstrap'
+import { FaTrash } from 'react-icons/fa'
 function Basket() {
-  const {baskets,setBaskets} = useContext(BasketContext)
+  const {baskets,setBaskets,removeFromBaskets} = useContext(BasketContext)
   function handleDecrease(book){
     book.count --
 
@@ -45,7 +46,11 @@ function Basket() {
                   <button onClick={()=> handleDecrease(book)}>-</button>
                   {book.count}
                   <button onClick={() =>handleIncrease(book)}>+</button>
+                  <Button variant="danger" size="sm" onClick={() => removeFromBaskets(book.id)}>
+                    <FaTrash className="me-1" /> Delete
+                  </Button>
                 </div>
+                
               </td>
             </tr>
           ))}
